@@ -1440,7 +1440,7 @@
               </div>
             </div>
 
-            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
               <div class="ud-widget">
                 <h5 class="ud-widget-title">Superfillads</h5>
                 <ul class="ud-widget-links">
@@ -1456,37 +1456,19 @@
                 </ul>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-              <div class="ud-widget">
-                <h5 class="ud-widget-title" style="visibility: hidden">
-                  Product
-                </h5>
-                <ul class="ud-widget-links">
-                  <li>
-                    <a href="#0">Sign Up</a>
-                  </li>
-                  <li>
-                    <a href="#0">Sign In</a>
-                  </li>
-                  <li>
-                    <a href="#testimonials"
-                      >Testimonial</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
               <div class="ud-widget">
                 <h5 class="ud-widget-title">Company</h5>
                 <ul class="ud-widget-links">
                   <li>
                     <a href="about.html">About us</a>
+                  </li>                  
+                  <li>
+                    <a href="#testimonials">Testimonial</a>
                   </li>
                   <li>
                     <a href="#contact">Contact us</a>
                   </li>
-                  <li></li>
                 </ul>
               </div>
             </div>
@@ -1499,17 +1481,17 @@
             <div class="col-md-8">
               <ul class="ud-footer-bottom-left">
                 <li>
-                  <a href="privacy-policy.html"
+                  <a href="/"
                     >Privacy policy</a
                   >
                 </li>
                 <li>
-                  <a href="cookies.html"
+                  <a href="/"
                     >Cookie policy</a
                   >
                 </li>
                 <li>
-                  <a href="terms-of-service.html"
+                  <a href="/"
                     >Terms of service</a
                   >
                 </li>
@@ -1664,14 +1646,13 @@
       document.addEventListener("DOMContentLoaded", function () {
         var carouselElement = document.getElementById("nativeAdsSlider");
         var carousel = new bootstrap.Carousel(carouselElement, {
-          interval: 10000,
+          interval: 5000,
           wrap: true,
         });
 
         var navButtons = document.querySelectorAll("#nativeAdsNav .nav-link");
 
         carouselElement.addEventListener("slide.bs.carousel", function (e) {
-          // Update active nav button
           navButtons.forEach(function (btn, index) {
             if (index === e.to) {
               btn.classList.add("active");
@@ -1687,7 +1668,6 @@
           });
         });
 
-        // Add swipe functionality
         var hammer = new Hammer(carouselElement);
         hammer.on("swipeleft", function () {
           carousel.next();
