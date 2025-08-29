@@ -2348,7 +2348,7 @@ body.dark-mode .progress-wrap::after {
     width: 100%;
     top: 0;
     left: 0;
-    height: 50%;
+    height: 100%;
     background: url(../images/contact-bg.png) no-repeat center center;
     background-size: cover;
     filter: hue-rotate(300deg);
@@ -4038,6 +4038,24 @@ sign in/sign up popup
 #cd-signup.is-selected,
 #cd-reset-password.is-selected {
     display: block;
+}
+
+.contactRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contactRow>* {
+    width: fit-content !important;
+    margin: 0 !important;
+}
+
+.contactRow .emailGrp {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.5rem;
 }
 
 /*# sourceMappingURL=ud-styles.css.map */
